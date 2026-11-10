@@ -1,0 +1,14 @@
+@font-face{font-family:"PixOp";src:url("../fonts/PixOp.ttf") format("truetype")}html,body{margin:0;height:100%;background:#111;overflow:hidden;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+canvas{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);image-rendering:pixelated;background:#000}
+#ov{background:none;image-rendering:auto;pointer-events:none}
+#tc{position:fixed;inset:0;display:none;pointer-events:none;z-index:10;font-family:system-ui,sans-serif}
+#tj{position:absolute;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));width:136px;height:136px;border-radius:50%;background:rgba(255,255,255,.10);border:2px solid rgba(255,255,255,.30);pointer-events:auto;touch-action:none}
+#tjk{position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(255,255,255,.30);border:2px solid rgba(255,255,255,.45)}
+#tr{position:absolute;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(3,58px);grid-auto-rows:58px;gap:10px}
+#tt{position:absolute;right:max(10px,env(safe-area-inset-right));top:max(8px,env(safe-area-inset-top));display:flex;gap:8px}
+.tb{pointer-events:auto;touch-action:none;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.34);color:#fff;font:700 18px system-ui,sans-serif;display:flex;align-items:center;justify-content:center;text-shadow:0 1px 2px #000}
+.tb.on{background:rgba(255,224,112,.6);border-color:#ffe070}
+#tt .tb{width:44px;height:34px;border-radius:12px;font-size:12px}
+#tr .z{background:rgba(255,224,112,.20);border-color:rgba(255,224,112,.6)}
+#trot{display:none;position:fixed;inset:0;background:#111;color:#fff;align-items:center;justify-content:center;text-align:center;font:600 20px system-ui,sans-serif;pointer-events:none;z-index:20}
+@media (orientation:portrait){body.touchy #trot{display:flex}}
