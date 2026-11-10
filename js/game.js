@@ -148,7 +148,7 @@ const G={
     if(Number.isInteger(k)&&w===h){ctx.drawImage(im,x,y,w,h);return}
     const T=im._th||(im._th={}),key=w+"x"+h;let c=T[key];
     if(!c){c=document.createElement("canvas");c.width=w;c.height=h;const t=c.getContext("2d");t.imageSmoothingEnabled=true;t.imageSmoothingQuality="high";
-      let a=im;while(a.width/2>=w){const b=document.createElement("canvas");b.width=a.width>>1;b.height=a.height>>1;const u=b.getContext("2d");u.imageSmoothingEnabled=true;u.drawImage(a,0,0,b.width,b.height);a=b}
+      let a=im;while((a.naturalWidth||a.width)/2>=w){const b=document.createElement("canvas");b.width=(a.naturalWidth||a.width)>>1;b.height=(a.naturalHeight||a.height)>>1;const u=b.getContext("2d");u.imageSmoothingEnabled=true;u.drawImage(a,0,0,b.width,b.height);a=b}
       t.drawImage(a,0,0,w,h);T[key]=c}
     ctx.drawImage(c,x,y)},
   pic(k,expr,x,y,sz,flip){const im=PIC[k]&&PIC[k][expr];if(!im)return;
